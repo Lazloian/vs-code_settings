@@ -1,0 +1,126 @@
+{   
+    "workbench.startupEditor": "none",
+    "editor.minimap.enabled": false,
+    "editor.rulers": [120],
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.fontFamily": "'cascadia code'",
+    "workbench.sideBar.location": "right",
+    "window.menuBarVisibility": "toggle",
+    "editor.detectIndentation": true,
+    "window.title": "${rootName}${separator}${activeEditorLong}",
+    "editor.dragAndDrop": false,
+
+    "telemetry.telemetryLevel": "off",
+
+    // Theme colors
+    "workbench.colorCustomizations": 
+    {
+      "[Default Dark+]": 
+      {
+        "statusBar.background": "#3C3C3C",
+        "statusBar.foreground": "#00ffaa",
+        "activityBar.foreground": "#00ffaa",
+        "titleBar.activeForeground": "#00ffaa"
+      }
+    },
+
+    // Vim
+    "vim.easymotion": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+
+    "vim.leader" : "<space>",
+
+    "vim.normalModeKeyBindings": [
+        // Colon to open the command palette
+        {
+            "before" : [":"],
+            "commands" : [
+                "workbench.action.showCommands"
+            ]
+        },
+        // Hotkey to search project.
+        {
+            "before" : ["<leader>", "F"],
+            "commands" : [
+                "workbench.view.search"
+            ]
+        },
+        // Toggles sidebar visibility.
+        {
+            "before" : ["<leader>", "s"],
+            "commands" : [
+                "workbench.action.toggleSidebarVisibility"
+            ]
+        },
+        // Save with leader w.
+        {
+            "before" : ["<leader>", "w"],
+            "commands" : [
+                "workbench.action.files.save"
+            ]
+        },
+    ],
+
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    "cmake.configureOnOpen": true,
+    "cmake.configureOnEdit": false,
+    "cSpell.enableFiletypes": [
+        "cmake"
+    ],
+
+    "better-comments.tags": [
+    
+        {
+          "tag": "!",
+          "color": "#FF2D00",
+          "strikethrough": false,
+          "underline": false,
+          "backgroundColor": "transparent",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "tag": "?",
+          "color": "#3498DB",
+          "strikethrough": false,
+          "underline": false,
+          "backgroundColor": "transparent",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "tag": "//",
+          "color": "#474747",
+          "strikethrough": true,
+          "underline": false,
+          "backgroundColor": "transparent",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "tag": "todo",
+          "color": "#FF8C00",
+          "strikethrough": false,
+          "underline": false,
+          "backgroundColor": "transparent",
+          "bold": false,
+          "italic": false
+        },
+        {
+          "tag": "*",
+          "color": "#98C379",
+          "strikethrough": false,
+          "underline": false,
+          "backgroundColor": "transparent",
+          "bold": false,
+          "italic": false
+        }
+      ],
+      "better-comments.highlightPlainText": true,
+      "cSpell.allowCompoundWords": true
+}
