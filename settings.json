@@ -19,6 +19,8 @@
       {
         "statusBar.background": "#3C3C3C",
         "statusBar.foreground": "#00ffaa",
+        "statusBar.debuggingBackground": "#00ffaa",
+        "statusBar.debuggingForeground": "#3C3C3C",
         "activityBar.foreground": "#00ffaa",
         "titleBar.activeForeground": "#00ffaa"
       }
@@ -30,29 +32,23 @@
     "vim.useSystemClipboard": true,
     "vim.useCtrlKeys": true,
     "vim.hlsearch": true,
+    "vim.foldfix": true,
 
     "vim.leader" : "<space>",
 
     "vim.normalModeKeyBindings": [
         // Colon to open the command palette
         {
-            "before" : [":"],
+            "before" : ["\""],
             "commands" : [
                 "workbench.action.showCommands"
             ]
         },
-        // Hotkey to search project.
+        // Hotkey to open find and replace.
         {
-            "before" : ["<leader>", "F"],
+            "before" : ["<leader>", "f"],
             "commands" : [
-                "workbench.view.search"
-            ]
-        },
-        // Toggles sidebar visibility.
-        {
-            "before" : ["<leader>", "s"],
-            "commands" : [
-                "workbench.action.toggleSidebarVisibility"
+                "editor.action.startFindReplaceAction"
             ]
         },
         // Save with leader w.
@@ -60,6 +56,51 @@
             "before" : ["<leader>", "w"],
             "commands" : [
                 "workbench.action.files.save"
+            ]
+        },
+        // Run default build task with leader b.
+        {
+            "before" : ["<leader>", "b"],
+            "commands" : [
+                "cmake.build"
+            ]
+        },
+        // Open tasks prompt with leader t.
+        {
+            "before" : ["<leader>", "t"],
+            "commands" : [
+                "cmake.buildWithTarget"
+            ]
+        },
+        // Toggle zen mode with leader z.
+        {
+            "before" : ["<leader>", "z"],
+            "commands" : [
+                "workbench.action.toggleZenMode"
+            ]
+        },
+        // Toggle zen mode with leader z.
+        {
+            "before" : ["z", "a"],
+            "commands" : [
+                "editor.toggleFold"
+            ]
+        },
+    ],
+
+    "vim.visualModeKeyBindings": [
+        // Format selection with leader f.
+        {
+            "before" : ["<leader>", "f"],
+            "commands" : [
+                "editor.action.formatSelection"
+            ]
+        },
+        // Colon to open the command palette
+        {
+            "before" : ["\""],
+            "commands" : [
+                "workbench.action.showCommands"
             ]
         },
     ],
@@ -74,9 +115,8 @@
     ],
 
     "better-comments.tags": [
-    
         {
-          "tag": "!",
+          "tag": "warn",
           "color": "#FF2D00",
           "strikethrough": false,
           "underline": false,
@@ -85,8 +125,8 @@
           "italic": false
         },
         {
-          "tag": "?",
-          "color": "#3498DB",
+          "tag": "note",
+          "color": "#fcdf02",
           "strikethrough": false,
           "underline": false,
           "backgroundColor": "transparent",
@@ -122,5 +162,17 @@
         }
       ],
       "better-comments.highlightPlainText": true,
-      "cSpell.allowCompoundWords": true
+      "cSpell.allowCompoundWords": true,
+      "diffEditor.ignoreTrimWhitespace": false,
+      "cortex-debug.enableTelemetry": false,
+      "debug.showInStatusBar": "always",
+      "git.suggestSmartCommit": false,
+      "git.showCommitInput": false,
+      "cSpell.diagnosticLevel": "Hint",
+      "debug.console.closeOnEnd": true,
+      "debug.terminal.clearBeforeReusing": true,
+      "git.confirmSync": false,
+    "cmake.buildDirectory": "${workspaceFolder}/Build",
+    "timeline.excludeSources": [],
+    "editor.codeLens": false,
 }
